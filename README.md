@@ -1,118 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhargav Fashion</title>
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: Arial, sans-serif; background:#f5f5f5; color:#333; }
-        
-        /* Header */
-        header { background:#ff3c00; color:#fff; padding:20px; text-align:center; }
-        header img { height:60px; display:block; margin:0 auto 10px; }
-        header h1 { font-size:2rem; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhargav Fashion</title>
 
-        /* Navigation */
-        nav { display:flex; justify-content:center; background:#222; }
-        nav a { color:#fff; text-decoration:none; margin:0 15px; padding:15px; display:inline-block; }
-        nav a:hover { background:#ff3c00; border-radius:5px; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#f4f4f4}
 
-        /* Products Section */
-        .products { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; padding:20px; }
-        .product { background:#fff; border-radius:10px; padding:10px; text-align:center; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-        .product img { width:100%; border-radius:10px; }
-        .product h3 { margin:10px 0; }
-        .product p { margin:5px 0; }
-        .product button { padding:10px 20px; background:#ff3c00; color:#fff; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
-        .product button:hover { background:#e63900; }
+/* HEADER */
+header{
+    background:#ff3c00;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+header img{
+    height:60px;
+    margin-bottom:10px;
+}
 
-        /* Gallery Section */
-        .gallery { padding:20px; }
-        .gallery h2 { text-align:center; margin-bottom:20px; color:#ff3c00; }
-        .gallery img { width:100%; max-width:300px; margin:10px; border-radius:10px; display:inline-block; }
+/* NAV */
+nav{
+    background:#222;
+    display:flex;
+    justify-content:center;
+}
+nav a{
+    color:white;
+    padding:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{background:#ff3c00}
 
-        /* Payment Section */
-        .payment { padding:20px; text-align:center; background:#fff; margin:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-        .payment input, .payment button { display:block; width:90%; max-width:400px; margin:10px auto; padding:10px; border-radius:5px; border:none; font-size:1rem; }
-        .payment button { background:#ff3c00; color:#fff; cursor:pointer; font-weight:bold; }
-        .payment button:hover { background:#e63900; }
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:20px;
+}
+.product{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+.product button{
+    background:#ff3c00;
+    color:white;
+    border:none;
+    padding:10px;
+    width:100%;
+    border-radius:5px;
+    cursor:pointer;
+}
 
-        /* Footer */
-        footer { text-align:center; padding:20px; background:#222; color:#fff; margin-top:20px; }
+/* GALLERY */
+.gallery{
+    padding:20px;
+    background:white;
+}
+.gallery h2{
+    text-align:center;
+    color:#ff3c00;
+    margin-bottom:15px;
+}
+.gallery-images{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.gallery-images img{
+    width:250px;
+    margin:10px;
+    border-radius:10px;
+}
 
-        @media(max-width:600px){ 
-            nav { flex-direction:column; }
-            nav a { margin:5px 0; }
-        }
-    </style>
+/* PAYMENT */
+.payment{
+    background:white;
+    margin:20px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+}
+.payment input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+.payment button{
+    background:#ff3c00;
+    color:white;
+    padding:12px;
+    width:90%;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Header with Logo -->
-    <header>
-        <img src="logo.png" alt="Bhargav Fashion Logo">
-        <h1>Bhargav Fashion</h1>
-    </header>
+<!-- HEADER -->
+<header>
+    <img src="https://via.placeholder.com/200x60?text=LOGO" alt="Logo">
+    <h1>Bhargav Fashion</h1>
+</header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#payment">Cart/Payment</a>
-    </nav>
+<!-- NAV -->
+<nav>
+    <a href="#shop">Shop</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#payment">Payment</a>
+</nav>
 
-    <!-- Products Section -->
-    <section id="shop" class="products">
-        <div class="product">
-            <img src="https://i.ibb.co/7C7R5B0/product1.jpg" alt="Red T-Shirt">
-            <h3>Red T-Shirt</h3>
-            <p>Price: ₹499</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://i.ibb.co/2k7k1hT/product2.jpg" alt="Blue Jeans">
-            <h3>Blue Jeans</h3>
-            <p>Price: ₹899</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://i.ibb.co/2nQ5Tjk/product3.jpg" alt="Black Jacket">
-            <h3>Black Jacket</h3>
-            <p>Price: ₹1299</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://i.ibb.co/q7k1Qm0/product4.jpg" alt="White Sneakers">
-            <h3>White Sneakers</h3>
-            <p>Price: ₹1499</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
+<!-- PRODUCTS -->
+<section id="shop" class="products">
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <h2>Gallery</h2>
-        <img src="https://i.ibb.co/Tr0R2p6/freefire1.jpg" alt="Gallery Image 1">
-        <img src="https://i.ibb.co/Y8wXYdG/freefire2.jpg" alt="Gallery Image 2">
-        <img src="https://i.ibb.co/7C7R5B0/product1.jpg" alt="Gallery Image 3">
-    </section>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=T-Shirt">
+        <h3>Red T‑Shirt</h3>
+        <p>₹499</p>
+        <button>Add to Cart</button>
+    </div>
 
-    <!-- Payment Section -->
-    <section id="payment" class="payment">
-        <h2>Checkout & Pay via UPI</h2>
-        <p>UPI ID: <strong>Shihorabhargav0@oksbi</strong></p>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="number" placeholder="Contact Number" required>
-        <button onclick="alert('Payment successful! Your order is confirmed.')">Pay & Order</button>
-    </section>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Jeans">
+        <h3>Blue Jeans</h3>
+        <p>₹899</p>
+        <button>Add to Cart</button>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Bhargav Fashion. All rights reserved.
-    </footer>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Jacket">
+        <h3>Black Jacket</h3>
+        <p>₹1299</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Shoes">
+        <h3>White Shoes</h3>
+        <p>₹1499</p>
+        <button>Add to Cart</button>
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+<h2>Product Gallery</h2>
+<div class="gallery-images">
+    <img src="https://via.placeholder.com/400x300?text=Fashion+1">
+    <img src="https://via.placeholder.com/400x300?text=Fashion+2">
+    <img src="https://via.placeholder.com/400x300?text=Fashion+3">
+</div>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment" class="payment">
+<h2>Pay via UPI</h2>
+<p><b>UPI ID:</b> Shihorabhargav0@oksbi</p>
+<input type="text" placeholder="Your Name">
+<input type="number" placeholder="Mobile Number">
+<button onclick="alert('Order Placed Successfully')">Pay & Order</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2025 Bhargav Fashion | All Rights Reserved
+</footer>
 
 </body>
 </html>
